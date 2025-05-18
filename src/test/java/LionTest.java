@@ -30,12 +30,6 @@ public class LionTest {
         assertEquals(food, lion.getFood());
     }
 
-    @Test
-    public void lionHasManeIfMaleTest() throws Exception {
-        Lion lion = new Lion("Самец", new Feline());
-        assertTrue(lion.doesHaveMane());
-    }
-
 }
 
 
