@@ -30,7 +30,7 @@ public class LionParameterizedTest {
     }
 
     @Test
-    public void lionManeTestBasedOnSex() throws Exception {
+    public void lionManeTestBasedOnSexTest() throws Exception {
         Feline feline = mock(Feline.class);
         Lion lion = new Lion(sex, feline);
         assertEquals(expectedHasMane, lion.doesHaveMane());

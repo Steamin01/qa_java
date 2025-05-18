@@ -9,12 +9,12 @@ import java.util.List;
 public class LionTest {
 
     @Test(expected = Exception.class)
-    public void throwsExceptionIfInvalidSexProvided() throws Exception {
+    public void throwsExceptionIfInvalidSexProvidedTest() throws Exception {
         new Lion("Инопланетянин", new Feline());
     }
 
     @Test
-    public void getKittensReturnsFelineValue() throws Exception {
+    public void getKittensReturnsFelineValueTest() throws Exception {
         Feline feline = mock(Feline.class);
         when(feline.getKittens()).thenReturn(2);
         Lion lion = new Lion("Самец", feline);
@@ -22,7 +22,7 @@ public class LionTest {
     }
 
     @Test
-    public void getFoodReturnsFelineFood() throws Exception {
+    public void getFoodReturnsFelineFoodTest() throws Exception {
         Feline feline = mock(Feline.class);
         List<String> food = List.of("Животные", "Птицы");
         when(feline.getFood("Хищник")).thenReturn(food);
@@ -31,16 +31,11 @@ public class LionTest {
     }
 
     @Test
-    public void lionHasManeIfMale() throws Exception {
+    public void lionHasManeIfMaleTest() throws Exception {
         Lion lion = new Lion("Самец", new Feline());
         assertTrue(lion.doesHaveMane());
     }
 
-    @Test
-    public void lionNoManeIfFemale() throws Exception {
-        Lion lion = new Lion("Самка", new Feline());
-        assertFalse(lion.doesHaveMane());
-    }
 }
 
 
